@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="A 2010 és 2026 között ki nem hirdetett 3 598 kormányhatározat teljes listája, a sorozatból hiányzó 491 sorszámmal és 40 feldolgozott ügy ellenőrzött forrásaival.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Titkos kormánydöntések — 3 598 ki nem hirdetett kormányhatározat">
+<meta property="og:description" content="Tizenhat éven át nem hirdették ki őket a Magyar Közlönyben. 3 598 határozat, 491 hiányzó sorszám, 287 ellenőrzött forrás.">
+<meta property="og:locale" content="hu_HU">
+<meta name="twitter:card" content="summary_large_image">
+<style>html{color-scheme:light}body{margin:0;font:14px system-ui,sans-serif;background:#f1f2f4}
+img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Titkos kormánydöntések</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: single reading column; a full-bleed year-by-year cell field is the spine,
+   with a slide-over dossier panel. Archival ink-on-paper, one signal hue for what is still withheld. */
+:root{
+  --paper:#f1f2f4; --card:#fcfcfb; --ink:#14161b; --ink-2:#4a515e; --ink-3:#787f8c;
+  --rule:#d8dade; --rule-2:#e6e7ea;
+  --pub:#2563a8; --held:#c2410c;
+  --pub-soft:#dbe6f3; --held-soft:#f7e2d6;
+  --good:#1f6b4f; --warn:#8a5a00; --crit:#a3271a;
+  --shadow:0 1px 2px rgba(20,22,27,.06),0 8px 24px rgba(20,22,27,.07);
+  --display:'Archivo',ui-sans-serif,system-ui,sans-serif;
+  --body:'IBM Plex Sans',ui-sans-serif,system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#101215; --card:#181b20; --ink:#eceef1; --ink-2:#a8b0bd; --ink-3:#7b8492;
+  --rule:#2a2e36; --rule-2:#22262d;
+  --pub:#5596d9; --held:#d4732c;
+  --pub-soft:#1e3752; --held-soft:#402518;
+  --good:#54b08a; --warn:#d0a03f; --crit:#e0705f;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --paper:#101215; --card:#181b20; --ink:#eceef1; --ink-2:#a8b0bd; --ink-3:#7b8492;
+  --rule:#2a2e36; --rule-2:#22262d;
+  --pub:#5596d9; --held:#d4732c;
+  --pub-soft:#1e3752; --held-soft:#402518;
+  --good:#54b08a; --warn:#d0a03f; --crit:#e0705f;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.55;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1160px;margin:0 auto;padding-inline:20px;padding-block:0}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+a{color:inherit}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* ---------- masthead ---------- */
+header.mast{border-bottom:1px solid var(--rule);background:var(--card)}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-3);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.kicker .dot{width:4px;height:4px;border-radius:50%;background:var(--held);flex:none}
+h1{font-size:clamp(34px,6.4vw,60px);line-height:1.02;letter-spacing:-.025em;font-weight:700;margin-block:14px 0}
+.stand{font-size:clamp(15px,2.2vw,18px);color:var(--ink-2);max-width:62ch;margin-top:14px}
+.mast .wrap{padding-block:clamp(26px,5vw,48px) 0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;
+  background:var(--rule-2);border:1px solid var(--rule-2);border-bottom:0;margin-top:30px}
+.stat{background:var(--card);padding:14px 16px 16px}
+.stat .n{font-family:var(--display);font-size:clamp(26px,4.4vw,36px);font-weight:700;letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums;line-height:1.1}
+.stat .l{font-size:12px;color:var(--ink-3);margin-top:3px;line-height:1.35}
+.stat.held .n{color:var(--held)}
+
+/* ---------- sections ---------- */
+section{padding-block:clamp(34px,5vw,56px)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;flex-wrap:wrap;
+  border-bottom:1px solid var(--rule);padding-bottom:10px;margin-bottom:22px}
+h2{font-size:clamp(20px,3vw,26px);letter-spacing:-.015em;font-weight:600}
+.sec-head p{margin:0;font-size:13px;color:var(--ink-3);max-width:46ch}
+.note{font-size:14px;color:var(--ink-2);max-width:64ch}
+
+/* ---------- chart ---------- */
+.chartcard{background:var(--card);border:1px solid var(--rule-2);padding:18px 16px 10px;box-shadow:var(--shadow)}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--ink-2);margin-bottom:14px}
+.legend i{width:11px;height:11px;display:inline-block;margin-right:7px;vertical-align:-1px;border-radius:2px}
+.legend .sw-pub{background:var(--pub)}
+.legend .sw-held{background:var(--held)}
+.legend .sw-ghost{background:var(--pub-soft)}
+.chartscroll{overflow-x:auto}
+svg.bars{display:block;width:100%;min-width:620px;height:300px}
+svg.bars text{font-family:var(--mono);font-size:10.5px;fill:var(--ink-3)}
+svg.bars text.yr{font-size:11px}
+svg.bars .gl{stroke:var(--rule-2);stroke-width:1}
+svg.bars .hit{fill:transparent;cursor:pointer}
+svg.bars g.col{cursor:pointer}
+svg.bars g.col rect.pub,svg.bars g.col rect.held{transition:opacity .12s}
+svg.bars g.col:hover rect.pub,svg.bars g.col:hover rect.held{opacity:.72}
+svg.bars g.col.on rect.pub{stroke:var(--ink);stroke-width:1.5}
+svg.bars g.col.on rect.held{stroke:var(--ink);stroke-width:1.5}
+svg.bars g.col.dim rect.ghost,svg.bars g.col.dim rect.held{opacity:.35}
+svg.bars rect.pub{transition:y .25s ease,height .25s ease}
+svg.bars g.col.sel rect.pub{fill:var(--pub)}
+svg.bars text.val{fill:var(--ink-2);font-weight:600}
+.tip{position:fixed;z-index:60;pointer-events:none;background:var(--card);border:1px solid var(--rule);
+  box-shadow:var(--shadow);padding:9px 11px;font-size:12.5px;max-width:230px;opacity:0;transition:opacity .12s}
+.tip b{font-family:var(--display)}
+.tip .r{display:flex;justify-content:space-between;gap:14px;font-variant-numeric:tabular-nums}
+.tip .r span:first-child{color:var(--ink-3)}
+
+/* ---------- filters ---------- */
+.filters{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:var(--paper);
+  border-bottom:1px solid var(--rule);padding-block:10px}
+.filters .hint{margin:8px 0 0;font-size:12.5px;color:var(--ink-3);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.livebadge{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--good);border:1px solid var(--good);padding:2px 6px}
+.legend-hint{color:var(--ink-3);margin-left:auto}
+.frow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+input[type=search],select{font-family:var(--body);font-size:13px;color:var(--ink);background:var(--card);
+  border:1px solid var(--rule);padding:7px 10px;min-width:0}
+input[type=search]{flex:1 1 200px}
+.chip{font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;
+  border:1px solid var(--rule);background:var(--card);color:var(--ink-2);padding:6px 10px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--card);border-color:var(--ink)}
+.count{font-size:12.5px;color:var(--ink-3);font-variant-numeric:tabular-nums;margin-left:auto}
+button:focus-visible,select:focus-visible,input:focus-visible,.cell:focus-visible,.caserow:focus-visible{
+  outline:2px solid var(--pub);outline-offset:2px}
+
+/* ---------- cell field ---------- */
+.yearblock{display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:start;margin-bottom:9px}
+.ylab{font-family:var(--mono);font-size:12px;color:var(--ink-2);text-align:right;padding-top:3px;
+  font-variant-numeric:tabular-nums;position:relative}
+.ylab small{display:block;font-size:10px;color:var(--ink-3)}
+.cells{display:flex;flex-wrap:wrap;gap:2px}
+.cell{width:11px;height:11px;border:0;padding:0;cursor:pointer;background:var(--rule);border-radius:1.5px}
+.cell.c0{background:var(--rule)}
+.cell.c1{background:var(--pub-soft)}
+.cell.c2{background:color-mix(in srgb,var(--pub) 55%,var(--pub-soft))}
+.cell.c3{background:var(--pub)}
+.cell.held{background:transparent;border:1px solid var(--held);cursor:default}
+.cell.rights{box-shadow:inset 0 -3px 0 var(--held)}
+.cell:hover{transform:scale(1.5);border-radius:2px;box-shadow:0 0 0 1px var(--ink)}
+.cell[data-id]{cursor:pointer}
+.fieldkey{display:flex;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--ink-3);margin-bottom:18px}
+.fieldkey i{width:10px;height:10px;display:inline-block;margin-right:6px;vertical-align:-1px;border-radius:1.5px}
+.empty{color:var(--ink-3);font-size:14px;padding:30px 0}
+
+/* ---------- panel ---------- */
+.scrim{position:fixed;inset:0;background:rgba(10,12,15,.42);z-index:40;opacity:0;transition:opacity .18s;
+  pointer-events:none}
+.scrim.open{pointer-events:auto}
+.panel{position:fixed;top:0;right:0;bottom:0;width:min(560px,100%);background:var(--card);z-index:50;
+  border-left:1px solid var(--rule);overflow-y:auto;transform:translateX(100%);transition:transform .22s ease;
+  padding:0 0 40px}
+.panel.open{transform:none}
+.panel[hidden]{display:none!important}
+.scrim.open{opacity:1}
+.phead{position:sticky;top:0;background:var(--card);border-bottom:1px solid var(--rule);
+  padding:16px 20px 13px;display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.phead .id{font-family:var(--mono);font-size:12px;color:var(--held);letter-spacing:.04em}
+.phead h3{font-size:17px;line-height:1.3;margin-top:5px;font-weight:600}
+.xbtn{border:1px solid var(--rule);background:var(--card);color:var(--ink-2);width:30px;height:30px;
+  flex:none;cursor:pointer;font-size:15px;line-height:1}
+.pbody{padding:18px 20px}
+.pblock{margin-bottom:22px}
+.pblock h4{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 8px;font-weight:500}
+.money{font-family:var(--display);font-size:26px;font-weight:700;letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums;line-height:1.15}
+.money small{display:block;font-family:var(--body);font-size:12.5px;font-weight:400;color:var(--ink-2);
+  letter-spacing:0;margin-top:5px;line-height:1.45}
+.tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px}
+.tag{font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;
+  border:1px solid var(--rule);color:var(--ink-3);padding:3px 6px}
+.tag.on{border-color:var(--held);color:var(--held)}
+ul.plain{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.ben{border-left:2px solid var(--rule);padding-left:11px;font-size:13.5px}
+.ben b{font-weight:600}
+.ben span{display:block;color:var(--ink-2);font-size:12.5px}
+.ben em{display:block;color:var(--ink-3);font-size:12px;font-style:normal;margin-top:2px}
+.out{font-size:13.5px;display:flex;gap:9px;align-items:flex-start}
+.tier{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;
+  padding:2px 5px;border:1px solid;flex:none;margin-top:2px;white-space:nowrap}
+.t-allegation{color:var(--warn);border-color:var(--warn)}
+.t-official{color:var(--good);border-color:var(--good)}
+.t-documented_outcome{color:var(--crit);border-color:var(--crit)}
+.src{font-size:13px;border-bottom:1px solid var(--rule-2);padding-bottom:9px}
+.src a{color:var(--pub);text-decoration:none;font-weight:500}
+.src a:hover{text-decoration:underline}
+.src .meta{font-family:var(--mono);font-size:11px;color:var(--ink-3);margin-top:2px}
+.src .sup{color:var(--ink-2);font-size:12.5px;margin-top:3px}
+.gapbox{background:var(--held-soft);border-left:2px solid var(--held);padding:11px 13px;font-size:13px;color:var(--ink-2)}
+.pending{background:var(--rule-2);padding:13px 15px;font-size:13.5px;color:var(--ink-2)}
+.relcase{border:1px solid var(--rule);padding:12px 14px;cursor:pointer;background:var(--card);
+  display:block;width:100%;text-align:left;font-family:inherit;font-size:13.5px;color:inherit}
+.relcase:hover{border-color:var(--pub)}
+.relcase b{display:block;font-weight:600;margin-bottom:3px}
+.relcase span{color:var(--ink-3);font-size:12px;font-family:var(--mono)}
+
+/* ---------- case list ---------- */
+.caselist{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1px;
+  background:var(--rule-2);border:1px solid var(--rule-2)}
+.caserow{background:var(--card);border:0;padding:13px 14px;text-align:left;cursor:pointer;
+  font-family:inherit;color:inherit;display:flex;flex-direction:column;gap:5px;min-width:0}
+.caserow:hover{background:var(--pub-soft)}
+.caserow .ct{font-size:13.5px;font-weight:600;line-height:1.35}
+.caserow .cm{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);display:flex;gap:9px;flex-wrap:wrap}
+.badge{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;padding:2px 5px;border:1px solid}
+.b-rich{color:var(--pub);border-color:var(--pub)}
+.b-partial{color:var(--warn);border-color:var(--warn)}
+.b-pending{color:var(--ink-3);border-color:var(--rule)}
+
+/* ---------- method ---------- */
+.method{background:var(--card);border:1px solid var(--rule-2);padding:22px 20px}
+.method h3{font-size:15px;font-weight:600;margin-bottom:6px}
+.method .m{margin-bottom:18px;font-size:13.5px;color:var(--ink-2);max-width:68ch}
+.method .m:last-child{margin-bottom:0}
+.outlets{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.outlets span{font-family:var(--mono);font-size:11px;border:1px solid var(--rule);padding:3px 7px;color:var(--ink-2)}
+footer{border-top:1px solid var(--rule);padding-block:26px 40px;font-size:12.5px;color:var(--ink-3)}
+@media (max-width:640px){
+  .yearblock{grid-template-columns:42px 1fr;gap:9px}
+  .cell{width:9px;height:9px}
+  .panel{width:100%}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}
+  .cell:hover{transform:none}}
+</style>
+</head>
+<body>
+
+
+<header class="mast">
+  <div class="wrap">
+    <div class="kicker"><span class="dot"></span><span>kormany.hu · 2026. szeptember 29.</span><span>2010–2026</span></div>
+    <h1>Titkos kormánydöntések</h1>
+    <p class="stand">A 2000-es sorozatú kormányhatározatokat tizenhat éven át nem hirdették ki a Magyar
+    Közlönyben. A kormány most nyilvánosságra hozta a címüket — de csak a címüket: dátum, szöveg és
+    összeg nélkül. Itt mind a 3 598 kereshető, és látszik, mi hiányzik még.</p>
+    <div class="stats" id="stats"></div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section id="volume">
+  <div class="sec-head">
+    <h2>Évenkénti volumen</h2>
+    <p>A sorszámok évente 2001-től futnak, így a kihagyott számokból kiszámolható, hány döntés maradt vissza.</p>
+  </div>
+  <div class="chartcard">
+    <div class="legend">
+      <span><i class="sw-ghost"></i>Összes közzétett</span>
+      <span><i class="sw-pub"></i>A szűrésnek megfelel</span>
+      <span><i class="sw-held"></i>Hiányzó sorszám — továbbra sem nyilvános</span>
+      <span class="legend-hint">Kattints egy oszlopra az év szűréséhez</span>
+    </div>
+    <div class="chartscroll"><svg class="bars" id="bars" role="img" aria-label="Kormányhatározatok száma évenként"></svg></div>
+  </div>
+  <p class="note" style="margin-top:14px" id="volnote"></p>
+</section>
+
+<div class="filters" id="controls">
+  <div class="frow">
+    <input type="search" id="q" placeholder="Keresés címben, cégnévben, sorszámban…" aria-label="Keresés">
+    <select id="fyear" aria-label="Év"><option value="">Minden év</option></select>
+    <select id="fcat" aria-label="Terület"><option value="">Minden terület</option></select>
+    <button class="chip" id="fres" aria-pressed="false">Csak feldolgozott</button>
+    <button class="chip" id="frig" aria-pressed="false">Jogokat érintő</button>
+    <button class="chip" id="fclear" hidden>Szűrők törlése</button>
+    <span class="count" id="count"></span>
+  </div>
+  <p class="hint">A szűrés a fenti diagramra és az alábbi rácsra is hat — minden négyzet egy határozat, kattintásra megnyílik.
+  <span class="livebadge" id="live" hidden>élő adat</span></p>
+</div>
+</section>
+
+<section id="field">
+  <div class="sec-head">
+    <h2>Minden egyes döntés</h2>
+    <p>Egy négyzet egy határozat. Kattintásra megnyílik, amit tudni lehet róla.</p>
+  </div>
+  <div class="fieldkey" style="margin-top:18px">
+    <span><i style="background:var(--rule)"></i>Nincs feldolgozva</span>
+    <span><i style="background:var(--pub-soft)"></i>Ügyhöz kötve, kutatás alatt</span>
+    <span><i style="background:var(--pub)"></i>Ellenőrzött forrásokkal</span>
+    <span><i style="background:transparent;border:1px solid var(--held)"></i>Visszatartva</span>
+  </div>
+  <div id="grid"></div>
+</section>
+
+<section id="cases">
+  <div class="sec-head">
+    <h2>Ügyek</h2>
+    <p>A határozatok szálakba rendezve. 40 ügyet dolgoztunk fel ellenőrzött forrásokkal; a többi feltárása még hátravan.</p>
+  </div>
+  <div class="caselist" id="caselist"></div>
+</section>
+
+<section id="method">
+  <div class="sec-head"><h2>Módszertan és korlátok</h2></div>
+  <div class="method">
+    <div class="m"><h3>Mit tartalmaz a forrás</h3>
+    A kormany.hu 17 PDF-et tett közzé, évenként egyet, összesen 3 598 tétellel. Minden tétel egy sorszámból
+    és egy címből áll. <b>Nincs benne dátum, határozatszöveg, összeg és címzett.</b> Ez a lap a PDF-ekből
+    kinyert teljes listát mutatja; a kinyert tételszám megegyezik a kormány által közölt összesítéssel.</div>
+
+    <div class="m"><h3>Miért nincs valódi idővonal</h3>
+    Napra pontos dátum nem áll rendelkezésre, ezért az időbeli bontás éves szintű. Az éven belüli sorrend
+    a sorszám növekvő rendjét követi, ami a meghozatal sorrendjének közelítése — nem pontos dátum.</div>
+
+    <div class="m"><h3>Hogyan számoltuk a visszatartott döntéseket</h3>
+    A sorszámok évente 2001-től folyamatosan futnak. Az adott év legmagasabb közzétett sorszámáig minden
+    kihagyott szám egy olyan határozat, amely megszületett, de nem került a listára. Ebből adódik a
+    <b id="whinline"></b> hiányzó tétel. Ez számítás, nem hivatalos közlés.</div>
+
+    <div class="m"><h3>Hogyan kapcsoltuk a döntésekhez a forrásokat</h3>
+    A határozatokat tematikus ügyekbe rendeztük, és az ügyeket kutattuk fel — nem az egyes sorszámokat.
+    Ennek oka egy fontos korlát: <b>nyilvános forrás jelenleg egyetlen 2000-es sorszámhoz sem rendel
+    konkrét kifizetett összeget</b>, mert a kormány csak a címeket hozta nyilvánosságra. Az itt szereplő
+    összegek tehát az ügyre vonatkoznak, a megjelölt forrás állítása szerint, és nem egy adott
+    határozathoz rendelt tételek.</div>
+
+    <div class="m"><h3>Bizonyítási szintek</h3>
+    Minden következtetés jelölve van: <span class="tier t-allegation">sajtóértesülés</span>
+    <span class="tier t-official">hivatalos megállapítás</span>
+    <span class="tier t-documented_outcome">dokumentált következmény</span>.
+    Korrupciót ez a lap nem állít; azt idézi, amit a megnevezett szerkesztőség vagy hatóság állított.
+    Minden hivatkozott URL-t megnyitottunk és ellenőriztünk a felvétel előtt.</div>
+
+    <div class="m"><h3>Ami hiányzik</h3>
+    111 ügyből 40 van feldolgozva. A többi az ügylistában <span class="badge b-pending">kutatás alatt</span>
+    jelöléssel szerepel — ezek nem forráshiányos ügyek, egyszerűen még nem kerültek sorra.
+    Az ügyek <b>gaps</b> mezője minden esetben megnevezi, mit nem sikerült megerősíteni.
+    <div class="outlets" id="outlets"></div></div>
+  </div>
+</section>
+
+<footer>
+  Forrás: <a href="https://kormany.hu/kormanydontesek-20102026" target="_blank" rel="noopener">kormany.hu/kormanydontesek-20102026</a>.
+  Az adatok a 2026. szeptember 22-i keltezésű PDF-ekből származnak. A lap a nyilvános forrásokat idézi és
+  hivatkozza; az értékelés az olvasóé.
+</footer>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<aside class="panel" id="panel" role="dialog" aria-modal="true" aria-label="Határozat részletei" hidden>
+  <div class="phead">
+    <div><div class="id" id="pid"></div><h3 id="ptitle"></h3></div>
+    <button class="xbtn" id="pclose" aria-label="Bezárás">✕</button>
+  </div>
+  <div class="pbody" id="pbody"></div>
+</aside>
+<div class="tip" id="tip" role="status"></div>
+
+
+<div id="loadstate" style="padding:40px 20px;text-align:center;color:#787f8c">Adatok betöltése…</div>
+<script>
+function boot(D){
+"use strict";
+var CASES = D.cases, CATS = D.cats, DEC = D.d, YEARS = D.years, M = D.meta;
+var caseBySlug = {}; CASES.forEach(function(c,i){ caseBySlug[c.slug]=i; });
+
+function nf(n){ return n.toLocaleString('hu-HU'); }
+function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){
+  return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+function huf(n){
+  if(n==null) return null;
+  if(n>=1e9) return (n/1e9).toLocaleString('hu-HU',{maximumFractionDigits:1})+' milliárd Ft';
+  if(n>=1e6) return (n/1e6).toLocaleString('hu-HU',{maximumFractionDigits:1})+' millió Ft';
+  return nf(n)+' Ft';
+}
+
+/* ---------- stats ---------- */
+var statDefs = [
+  ['3 598','közzétett határozat 2010 és 2026 között',''],
+  [nf(M.withheld_total),'sorszám hiányzik a sorozatból — ezek nem kerültek nyilvánosságra','held'],
+  [nf(M.sources_verified),'ellenőrzött forrás '+M.cases_researched+' feldolgozott ügyben',''],
+  [nf(M.decisions_researched),'határozat mögött van feltárt dokumentáció',''],
+];
+document.getElementById('stats').innerHTML = statDefs.map(function(s){
+  return '<div class="stat '+s[2]+'"><div class="n tnum">'+s[0]+'</div><div class="l">'+s[1]+'</div></div>';
+}).join('');
+document.getElementById('whinline').textContent = nf(M.withheld_total);
+document.getElementById('outlets').innerHTML = (M.outlets||[]).map(function(o){
+  return '<span>'+esc(o[0])+' · '+o[1]+'</span>'; }).join('');
+
+var peak = YEARS.reduce(function(a,b){ return b.pub>a.pub?b:a; });
+var maxWh = YEARS.reduce(function(a,b){ return b.wh>a.wh?b:a; });
+document.getElementById('volnote').innerHTML =
+  'A csúcs <b>'+peak.y+'</b> volt '+nf(peak.pub)+' közzétett határozattal — több, mint a 2010 és 2016 közötti hét év együttvéve ('+
+  nf(YEARS.filter(function(y){return y.y<=2016;}).reduce(function(a,b){return a+b.pub;},0))+'). '+
+  'A legtöbb visszatartott tétel szintén '+maxWh.y+'-ben keletkezett: '+nf(maxWh.wh)+' sorszám hiányzik, az évi termés '+
+  Math.round(100*maxWh.wh/maxWh.iss)+'%-a.';
+
+/* ---------- chart ---------- */
+var tip = document.getElementById('tip');
+function showTip(html,x,y){
+  tip.innerHTML=html; tip.style.opacity='1';
+  var r=tip.getBoundingClientRect();
+  var left=Math.min(Math.max(8,x-r.width/2), innerWidth-r.width-8);
+  var top=y-r.height-12; if(top<8) top=y+18;
+  tip.style.left=left+'px'; tip.style.top=top+'px';
+}
+function hideTip(){ tip.style.opacity='0'; }
+
+var BAR={};
+(function drawBars(){
+  var svg=document.getElementById('bars');
+  var W=940,H=300,ml=44,mr=12,mt=16,mb=40;
+  var iw=W-ml-mr, ih=H-mt-mb;
+  var max=Math.max.apply(null,YEARS.map(function(y){return y.iss;}));
+  var step=Math.ceil(max/4/100)*100;
+  var top=step*4;
+  var bw=iw/YEARS.length, bar=Math.min(38,bw*0.62);
+  BAR={W:W,H:H,ml:ml,mt:mt,ih:ih,bw:bw,bar:bar,top:top};
+  var p=['<g>'];
+  for(var t=0;t<=4;t++){
+    var v=step*t, yy=mt+ih-(v/top)*ih;
+    p.push('<line class="gl" x1="'+ml+'" x2="'+(W-mr)+'" y1="'+yy.toFixed(1)+'" y2="'+yy.toFixed(1)+'"/>');
+    p.push('<text x="'+(ml-8)+'" y="'+(yy+3.5).toFixed(1)+'" text-anchor="end">'+nf(v)+'</text>');
+  }
+  p.push('</g>');
+  YEARS.forEach(function(y,i){
+    var cx=ml+bw*i+bw/2, x=cx-bar/2;
+    var hp=(y.pub/top)*ih, hw=(y.wh/top)*ih;
+    var yp=mt+ih-hp, yw=yp-hw-(hw>0?2:0);
+    p.push('<g class="col" data-y="'+y.y+'">');
+    if(hw>0.5) p.push('<rect class="held" x="'+x.toFixed(1)+'" y="'+yw.toFixed(1)+'" width="'+bar+'" height="'+hw.toFixed(1)+'" rx="2" fill="var(--held)"/>');
+    p.push('<rect class="ghost" x="'+x.toFixed(1)+'" y="'+yp.toFixed(1)+'" width="'+bar+'" height="'+Math.max(hp,1).toFixed(1)+'" rx="2" fill="var(--pub-soft)"/>');
+    p.push('<rect class="pub" x="'+x.toFixed(1)+'" y="'+yp.toFixed(1)+'" width="'+bar+'" height="'+Math.max(hp,1).toFixed(1)+'" rx="2" fill="var(--pub)"/>');
+    p.push('<text class="val" x="'+cx.toFixed(1)+'" y="'+(yw-7).toFixed(1)+'" text-anchor="middle"></text>');
+    p.push('<text class="yr" x="'+cx.toFixed(1)+'" y="'+(mt+ih+17)+'" text-anchor="middle">'+("'"+String(y.y).slice(2))+'</text>');
+    p.push('<rect class="hit" x="'+(ml+bw*i).toFixed(1)+'" y="'+mt+'" width="'+bw.toFixed(1)+'" height="'+ih+'"/>');
+    p.push('</g>');
+  });
+  svg.setAttribute('viewBox','0 0 '+W+' '+H);
+  svg.innerHTML=p.join('');
+  svg.querySelectorAll('g.col').forEach(function(g){
+    var y=YEARS.filter(function(v){return String(v.y)===g.dataset.y;})[0];
+    g.addEventListener('mousemove',function(e){
+      var m=(BAR.counts&&BAR.counts[y.y])||0;
+      var filtered=isFiltered();
+      showTip('<b>'+y.y+'</b>'+
+        (filtered?'<div class="r"><span>Szűrésnek megfelel</span><span>'+nf(m)+'</span></div>':'')+
+        '<div class="r"><span>Közzétéve</span><span>'+nf(y.pub)+'</span></div>'+
+        '<div class="r"><span>Visszatartva</span><span>'+nf(y.wh)+'</span></div>'+
+        '<div class="r"><span>Összesen kiadva</span><span>'+nf(y.iss)+'</span></div>', e.clientX, e.clientY);
+    });
+    g.addEventListener('mouseleave',hideTip);
+    g.addEventListener('click',function(){
+      var sel=document.getElementById('fyear');
+      sel.value = sel.value===g.dataset.y ? '' : g.dataset.y;
+      state.year=sel.value; render();
+    });
+  });
+})();
+
+function isFiltered(){
+  return !!(state.q || state.year || state.cat!=='' || state.res || state.rig);
+}
+function updateBars(counts){
+  BAR.counts=counts;
+  var svg=document.getElementById('bars'); if(!svg||!BAR.ih) return;
+  var filtered=isFiltered();
+  svg.querySelectorAll('g.col').forEach(function(g){
+    var yr=+g.dataset.y;
+    var y=YEARS.filter(function(v){return v.y===yr;})[0];
+    var m=counts[yr]||0;
+    var hp=(m/BAR.top)*BAR.ih;
+    var pub=g.querySelector('rect.pub');
+    pub.setAttribute('y',(BAR.mt+BAR.ih-hp).toFixed(1));
+    pub.setAttribute('height',Math.max(hp,0).toFixed(1));
+    var lab=g.querySelector('text.val');
+    lab.textContent = filtered ? (m?nf(m):'') : (y.pub>=250?nf(y.pub):'');
+    g.classList.toggle('on', state.year!=='' && g.dataset.y===state.year);
+    g.classList.toggle('dim', filtered && m===0);
+  });
+}
+
+/* ---------- decision model ---------- */
+var byId={};
+var decs = DEC.map(function(r){
+  var o={n:r[0],y:r[1],t:r[2],cats:r[3],cs:r[4],rights:!!r[5],lvl:0,src:0,
+         id:r[0]+'/'+r[1], hay:(r[0]+'/'+r[1]+' '+r[2]).toLowerCase()};
+  byId[o.id]=o; return o;
+});
+function recompute(){
+  decs.forEach(function(o){
+    var srcCount=0, researched=false;
+    o.cs.forEach(function(ci){
+      var c=CASES[ci];
+      if(c.r){ researched=true; srcCount+=(c.src||[]).length; }
+    });
+    o.src=srcCount;
+    o.lvl = !o.cs.length ? 0 : (!researched ? 1 : (srcCount>=6 ? 3 : 2));
+  });
+}
+recompute();
+
+var state={q:'',year:'',cat:'',res:false,rig:false};
+var fy=document.getElementById('fyear'), fc=document.getElementById('fcat');
+YEARS.forEach(function(y){ fy.insertAdjacentHTML('beforeend','<option value="'+y.y+'">'+y.y+'</option>'); });
+CATS.forEach(function(c,i){ fc.insertAdjacentHTML('beforeend','<option value="'+i+'">'+esc(c)+'</option>'); });
+
+function match(d){
+  if(state.year && String(d.y)!==state.year) return false;
+  if(state.cat!=='' && d.cats.indexOf(+state.cat)<0) return false;
+  if(state.res && d.lvl<2) return false;
+  if(state.rig && !d.rights) return false;
+  if(state.q && d.hay.indexOf(state.q)<0) return false;
+  return true;
+}
+
+function render(){
+  var grid=document.getElementById('grid'), out=[], shown=0, counts={};
+  YEARS.forEach(function(y){ counts[y.y]=0; });
+  decs.forEach(function(d){ if(match(d)) counts[d.y]++; });
+  YEARS.forEach(function(y){
+    if(state.year && String(y.y)!==state.year) return;
+    var list=decs.filter(function(d){ return d.y===y.y && match(d); });
+    var showHeld = !isFiltered() || (state.year && !state.q && state.cat==='' && !state.res && !state.rig);
+    if(!list.length && !(showHeld && y.wh)) return;
+    shown+=list.length;
+    var cells=list.map(function(d){
+      return '<button class="cell c'+d.lvl+(d.rights?' rights':'')+'" data-id="'+d.id+
+        '" title="'+esc(d.id+' — '+d.t.slice(0,90))+'" aria-label="'+esc(d.id)+'"></button>';
+    });
+    if(showHeld) y.whl.forEach(function(n){
+      cells.push('<span class="cell held" title="'+n+'/'+y.y+' — hiányzó sorszám, nem nyilvános"></span>');
+    });
+    out.push('<div class="yearblock"><div class="ylab">'+y.y+'<small>'+list.length+
+      (showHeld&&y.wh?' +'+y.wh:'')+'</small></div><div class="cells">'+cells.join('')+'</div></div>');
+  });
+  grid.innerHTML = out.length ? out.join('') : '<p class="empty">Nincs a szűrésnek megfelelő határozat.</p>';
+  document.getElementById('count').textContent = nf(shown)+' / '+nf(decs.length)+' határozat';
+  document.getElementById('fclear').hidden = !isFiltered();
+  updateBars(counts);
+}
+
+var qDebounce;
+document.getElementById('q').addEventListener('input',function(e){
+  var v=e.target.value.trim().toLowerCase();
+  clearTimeout(qDebounce);
+  qDebounce=setTimeout(function(){ state.q=v; render(); },160);
+});
+fy.addEventListener('change',function(e){ state.year=e.target.value; render(); });
+fc.addEventListener('change',function(e){ state.cat=e.target.value; render(); });
+['fres','frig'].forEach(function(id){
+  var k = id==='fres'?'res':'rig';
+  document.getElementById(id).addEventListener('click',function(e){
+    state[k]=!state[k]; e.currentTarget.setAttribute('aria-pressed',String(state[k])); render();
+  });
+});
+document.getElementById('fclear').addEventListener('click',function(){
+  state={q:'',year:'',cat:'',res:false,rig:false};
+  document.getElementById('q').value='';
+  fy.value=''; fc.value='';
+  ['fres','frig'].forEach(function(id){ document.getElementById(id).setAttribute('aria-pressed','false'); });
+  render();
+});
+
+/* ---------- panel ---------- */
+var panel=document.getElementById('panel'), scrim=document.getElementById('scrim');
+function openPanel(){ panel.hidden=false; requestAnimationFrame(function(){
+  panel.classList.add('open'); scrim.classList.add('open'); }); }
+function closePanel(){ panel.classList.remove('open'); scrim.classList.remove('open');
+  setTimeout(function(){ panel.hidden=true; },220); }
+document.getElementById('pclose').addEventListener('click',closePanel);
+scrim.addEventListener('click',closePanel);
+document.addEventListener('keydown',function(e){ if(e.key==='Escape') closePanel(); });
+
+function caseHTML(c){
+  var h=[];
+  h.push('<div class="pblock"><h4>Ügy</h4><div style="font-family:var(--display);font-size:16px;font-weight:600">'+
+    esc(c.t)+'</div><div class="tags">'+
+    '<span class="tag'+(c.cov==='rich'?' on':'')+'">'+(c.cov==='rich'?'részletes':c.cov==='partial'?'részleges':c.cov==='none'?'nincs forrás':'kutatás alatt')+'</span>'+
+    '<span class="tag">'+c.n+' határozat</span><span class="tag">'+c.ys[0]+'–'+c.ys[c.ys.length-1]+'</span>'+
+    '</div></div>');
+  if(!c.r){
+    h.push('<div class="pending">Ez az ügy azonosítva van, de a forrásfeltárása még nem készült el. '+
+      'A hozzá tartozó '+c.n+' határozat címe a listában megtalálható.</div>');
+    return h.join('');
+  }
+  var f=c.fin||{};
+  if(f.amount_huf||f.amount_other){
+    h.push('<div class="pblock"><h4>Pénzügyi nagyságrend</h4><div class="money">'+
+      esc(huf(f.amount_huf)||f.amount_other)+
+      (f.amount_huf&&f.amount_other?' <small style="display:inline;font-size:13px">('+esc(f.amount_other)+')</small>':'')+
+      '<small>'+esc(f.basis||'')+(f.confidence?' · '+({reported:'sajtóértesülés',official:'hivatalos adat',estimated:'becslés'}[f.confidence]||f.confidence):'')+'</small></div></div>');
+  }
+  if(c.sum) h.push('<div class="pblock"><h4>Összefoglaló</h4><p style="margin:0;font-size:14px">'+esc(c.sum)+'</p></div>');
+  if(c.rig) h.push('<div class="pblock"><h4>Jogi és társadalmi hatás</h4><p style="margin:0;font-size:13.5px;color:var(--ink-2)">'+esc(c.rig)+'</p></div>');
+  if(c.ben&&c.ben.length) h.push('<div class="pblock"><h4>Érintett szereplők</h4><ul class="plain">'+
+    c.ben.map(function(b){ return '<li class="ben"><b>'+esc(b.name)+'</b><span>'+esc(b.role||'')+'</span>'+
+      (b.note?'<em>'+esc(b.note)+'</em>':'')+'</li>'; }).join('')+'</ul></div>');
+  if(c.out&&c.out.length) h.push('<div class="pblock"><h4>Dokumentált következmények</h4><ul class="plain">'+
+    c.out.map(function(o){ return '<li class="out"><span class="tier t-'+esc(o.tier)+'">'+
+      ({allegation:'sajtó',official:'hivatalos',documented_outcome:'dokumentált'}[o.tier]||o.tier)+
+      '</span><span>'+esc(o.claim)+'</span></li>'; }).join('')+'</ul></div>');
+  if(c.src&&c.src.length) h.push('<div class="pblock"><h4>Források ('+c.src.length+')</h4><ul class="plain">'+
+    c.src.map(function(s){ return '<li class="src"><a href="'+esc(s.url)+'" target="_blank" rel="noopener">'+
+      esc(s.title||s.url)+'</a><div class="meta">'+esc(s.outlet||'')+(s.date?' · '+esc(s.date):'')+'</div>'+
+      (s.supports?'<div class="sup">'+esc(s.supports)+'</div>':'')+'</li>'; }).join('')+'</ul></div>');
+  if(c.gaps) h.push('<div class="pblock"><h4>Amit nem sikerült megerősíteni</h4><div class="gapbox">'+esc(c.gaps)+'</div></div>');
+  return h.join('');
+}
+
+function showDecision(id){
+  var d=byId[id]; if(!d) return;
+  document.getElementById('pid').textContent=d.id;
+  document.getElementById('ptitle').textContent=d.t;
+  var h=[];
+  h.push('<div class="pblock"><h4>Besorolás</h4><div class="tags">'+
+    d.cats.map(function(i){ return '<span class="tag">'+esc(CATS[i])+'</span>'; }).join('')+
+    (d.rights?'<span class="tag on">jogokat érint</span>':'')+'</div></div>');
+  if(!d.cs.length){
+    h.push('<div class="pending">Ehhez a határozathoz nem tartozik feldolgozott ügy. '+
+      'A kormány csak a címet hozta nyilvánosságra — szöveg, dátum és összeg nem ismert.</div>');
+  } else {
+    d.cs.forEach(function(ci){ h.push(caseHTML(CASES[ci])); });
+  }
+  document.getElementById('pbody').innerHTML=h.join('');
+  document.getElementById('pbody').scrollTop=0;
+  openPanel();
+}
+
+function showCase(ci){
+  var c=CASES[ci];
+  document.getElementById('pid').textContent=c.n+' határozat · '+c.ys[0]+'–'+c.ys[c.ys.length-1];
+  document.getElementById('ptitle').textContent=c.t;
+  var h=[caseHTML(c)];
+  h.push('<div class="pblock"><h4>Kapcsolódó határozatok</h4><ul class="plain">'+
+    c.ids.slice(0,40).map(function(id){ var d=byId[id]; if(!d) return '';
+      return '<li><button class="relcase" data-id="'+id+'"><b>'+esc(d.t.slice(0,120))+(d.t.length>120?'…':'')+
+        '</b><span>'+id+'</span></button></li>'; }).join('')+
+    '</ul>'+(c.ids.length>40?'<p style="font-size:12.5px;color:var(--ink-3);margin-top:8px">és további '+(c.ids.length-40)+' határozat</p>':'')+'</div>');
+  document.getElementById('pbody').innerHTML=h.join('');
+  document.getElementById('pbody').scrollTop=0;
+  openPanel();
+}
+
+document.addEventListener('click',function(e){
+  var cell=e.target.closest('.cell[data-id]'); if(cell){ showDecision(cell.dataset.id); return; }
+  var rc=e.target.closest('.relcase'); if(rc){ showDecision(rc.dataset.id); return; }
+  var cr=e.target.closest('.caserow'); if(cr){ showCase(+cr.dataset.ci); }
+});
+
+/* ---------- case list ---------- */
+function renderCases(){
+  document.getElementById('caselist').innerHTML = CASES.map(function(c,i){
+    return {c:c,i:i};
+  }).sort(function(a,b){
+    if(a.c.r!==b.c.r) return a.c.r?-1:1;
+    return b.c.n-a.c.n;
+  }).map(function(o){
+    var c=o.c;
+    var badge = c.r ? (c.cov==='rich'?'<span class="badge b-rich">részletes</span>':'<span class="badge b-partial">részleges</span>')
+                    : '<span class="badge b-pending">kutatás alatt</span>';
+    return '<button class="caserow" data-ci="'+o.i+'"><span class="ct">'+esc(c.t)+'</span>'+
+      '<span class="cm">'+badge+'<span>'+c.n+' határozat</span>'+
+      (c.r?'<span>'+(c.src||[]).length+' forrás</span>':'')+'</span></button>';
+  }).join('');
+}
+renderCases();
+render();
+
+/* ---------- live research layer ----------
+   The 3 598-decision corpus ships in the page. The research layer is kept in the
+   artifact's own store, so new dossiers appear without republishing the page.
+   When the store is unavailable (signed-out or public-link viewers) the page
+   falls back to the snapshot baked in at publish time. */
+(function hydrate(){
+  if(!window.claude || typeof claude.use!=='function') return;
+  var stats={r:M.cases_researched,s:M.sources_verified,d:M.decisions_researched};
+  claude.use('db').then(function(db){
+    if(!db) return;
+    db.collection('cases').onSnapshot(function(snap){
+      var changed=0;
+      snap.docs.forEach(function(doc){
+        var body=doc.data(); if(!body) return;
+        var i=caseBySlug[doc.id]; if(i==null) return;
+        var cur=CASES[i], next={};
+        for(var k in cur) next[k]=cur[k];
+        for(var k2 in body) if(k2!=='ids'&&k2!=='n'&&k2!=='ys') next[k2]=body[k2];
+        if(JSON.stringify(next)!==JSON.stringify(cur)){ CASES[i]=next; changed++; }
+      });
+      if(!changed) return;
+      recompute(); renderCases(); render(); refreshStats();
+      var b=document.getElementById('live'); if(b) b.hidden=false;
+    }, function(){ /* store unavailable: keep the published snapshot */ });
+  }).catch(function(){ /* same */ });
+
+  function refreshStats(){
+    var res=CASES.filter(function(c){ return c.r; });
+    var src=res.reduce(function(a,c){ return a+(c.src||[]).length; },0);
+    var ids={}; res.forEach(function(c){ c.ids.forEach(function(i){ ids[i]=1; }); });
+    var d=Object.keys(ids).length;
+    if(res.length===stats.r && src===stats.s && d===stats.d) return;
+    stats={r:res.length,s:src,d:d};
+    var tiles=document.querySelectorAll('#stats .stat');
+    if(tiles[2]){ tiles[2].querySelector('.n').textContent=nf(src);
+      tiles[2].querySelector('.l').textContent='ellenőrzött forrás '+res.length+' feldolgozott ügyben'; }
+    if(tiles[3]) tiles[3].querySelector('.n').textContent=nf(d);
+  }
+})();
+}
+
+
+(function(){
+  var st=document.getElementById('loadstate');
+  fetch('data.json',{cache:'force-cache'})
+    .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+    .then(function(D){ st.hidden=true; boot(D); })
+    .catch(function(e){
+      st.innerHTML='<p class="empty">Az adatok betöltése nem sikerült ('+String(e.message)+'). '+
+        'Frissítsd az oldalt, vagy nézd meg a forrást a <a href="https://kormany.hu/kormanydontesek-20102026">kormany.hu</a>-n.</p>';
+    });
+})();
+
+</script>
+</body>
+</html>
